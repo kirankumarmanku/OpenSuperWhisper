@@ -34,6 +34,31 @@
 		CEAC00032D82F00200000000 /* libautocorrect_swift.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAC00012D82F00000000000 /* libautocorrect_swift.dylib */; };
 		CEAC00042D82F10000000000 /* libautocorrect_swift.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = CEAC00012D82F00000000000 /* libautocorrect_swift.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEAC00082D82F50000000000 /* libomp.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = CEAC00072D82F40000000000 /* libomp.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0E510100000000000000001B /* TranscriptionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000001 /* TranscriptionEngine.swift */; };
+		0E510100000000000000001C /* WhisperEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000002 /* WhisperEngine.swift */; };
+		0E510100000000000000001D /* TranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000003 /* TranscriptionService.swift */; };
+		0E510100000000000000001E /* TranscriptionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000004 /* TranscriptionSettings.swift */; };
+		0E510100000000000000001F /* PCMRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000005 /* PCMRecording.swift */; };
+		0E5101000000000000000020 /* WhisperModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000006 /* WhisperModelManager.swift */; };
+		0E5101000000000000000021 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000007 /* AppPreferences.swift */; };
+		0E5101000000000000000022 /* LanguageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000008 /* LanguageUtil.swift */; };
+		0E5101000000000000000023 /* Whis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000009 /* Whis.swift */; };
+		0E5101000000000000000024 /* WhisperAhead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E510100000000000000000A /* WhisperAhead.swift */; };
+		0E5101000000000000000025 /* WhisperAheads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E510100000000000000000B /* WhisperAheads.swift */; };
+		0E5101000000000000000026 /* WhisperAlignmentHeadsPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E510100000000000000000C /* WhisperAlignmentHeadsPreset.swift */; };
+		0E5101000000000000000027 /* WhisperContextParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E510100000000000000000D /* WhisperContextParams.swift */; };
+		0E5101000000000000000028 /* WhisperFullParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E510100000000000000000E /* WhisperFullParams.swift */; };
+		0E5101000000000000000029 /* WhisperGrammarElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E510100000000000000000F /* WhisperGrammarElement.swift */; };
+		0E510100000000000000002A /* WhisperGrammarElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000010 /* WhisperGrammarElementType.swift */; };
+		0E510100000000000000002B /* WhisperModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000011 /* WhisperModelLoader.swift */; };
+		0E510100000000000000002C /* WhisperSamplingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000012 /* WhisperSamplingStrategy.swift */; };
+		0E510100000000000000002D /* WhisperTimings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000013 /* WhisperTimings.swift */; };
+		0E510100000000000000002E /* WhisperTokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000014 /* WhisperTokenData.swift */; };
+		0E510100000000000000002F /* ggml-tiny.en.bin in Resources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000015 /* ggml-tiny.en.bin */; };
+		0E5101000000000000000030 /* ggml-silero-v5.1.2.bin in Resources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000016 /* ggml-silero-v5.1.2.bin */; };
+		0E5101000000000000000031 /* jfk.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000017 /* jfk.wav */; };
+		0E5101000000000000000032 /* whisper.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000018 /* whisper.xcframework */; };
+		0E5101000000000000000033 /* whisper.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5101000000000000000018 /* whisper.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +71,17 @@
 				CEAC00042D82F00300000000 /* libautocorrect_swift.dylib in Copy Files */,
 			);
 			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E510100000000000000003A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			name = "Embed Frameworks";
+			files = (
+				0E5101000000000000000033 /* whisper.xcframework in Embed Frameworks */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -106,6 +142,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = CE57B0272D52C7BB00929AF3;
 			remoteInfo = OpenSuperWhisper;
+		};
+		0E5101000000000000000040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE57B0202D52C7BB00929AF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E510100000000000000003E;
+			remoteInfo = OpenSuperWhisperiOS;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -169,6 +212,32 @@
 		CE84DF792D5578BE00C54EA6 /* jfk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jfk.wav; sourceTree = "<group>"; };
 		CEAC00012D82F00000000000 /* libautocorrect_swift.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libautocorrect_swift.dylib; path = build/libautocorrect_swift.dylib; sourceTree = "<group>"; };
 		CEAC00072D82F40000000000 /* libomp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libomp.dylib; path = build/libomp.dylib; sourceTree = "<group>"; };
+		0E5101000000000000000001 /* TranscriptionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TranscriptionEngine.swift"; path = "OpenSuperWhisper/Engines/TranscriptionEngine.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000002 /* WhisperEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperEngine.swift"; path = "OpenSuperWhisper/Engines/WhisperEngine.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000003 /* TranscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TranscriptionService.swift"; path = "OpenSuperWhisper/TranscriptionService.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000004 /* TranscriptionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TranscriptionSettings.swift"; path = "OpenSuperWhisper/TranscriptionSettings.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000005 /* PCMRecording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PCMRecording.swift"; path = "OpenSuperWhisper/PCMRecording.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000006 /* WhisperModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperModelManager.swift"; path = "OpenSuperWhisper/WhisperModelManager.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000007 /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AppPreferences.swift"; path = "OpenSuperWhisper/Utils/AppPreferences.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000008 /* LanguageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageUtil.swift"; path = "OpenSuperWhisper/Utils/LanguageUtil.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000009 /* Whis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Whis.swift"; path = "OpenSuperWhisper/Whis/Whis.swift"; sourceTree = SOURCE_ROOT; };
+		0E510100000000000000000A /* WhisperAhead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperAhead.swift"; path = "OpenSuperWhisper/Whis/WhisperAhead.swift"; sourceTree = SOURCE_ROOT; };
+		0E510100000000000000000B /* WhisperAheads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperAheads.swift"; path = "OpenSuperWhisper/Whis/WhisperAheads.swift"; sourceTree = SOURCE_ROOT; };
+		0E510100000000000000000C /* WhisperAlignmentHeadsPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperAlignmentHeadsPreset.swift"; path = "OpenSuperWhisper/Whis/WhisperAlignmentHeadsPreset.swift"; sourceTree = SOURCE_ROOT; };
+		0E510100000000000000000D /* WhisperContextParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperContextParams.swift"; path = "OpenSuperWhisper/Whis/WhisperContextParams.swift"; sourceTree = SOURCE_ROOT; };
+		0E510100000000000000000E /* WhisperFullParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperFullParams.swift"; path = "OpenSuperWhisper/Whis/WhisperFullParams.swift"; sourceTree = SOURCE_ROOT; };
+		0E510100000000000000000F /* WhisperGrammarElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperGrammarElement.swift"; path = "OpenSuperWhisper/Whis/WhisperGrammarElement.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000010 /* WhisperGrammarElementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperGrammarElementType.swift"; path = "OpenSuperWhisper/Whis/WhisperGrammarElementType.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000011 /* WhisperModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperModelLoader.swift"; path = "OpenSuperWhisper/Whis/WhisperModelLoader.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000012 /* WhisperSamplingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperSamplingStrategy.swift"; path = "OpenSuperWhisper/Whis/WhisperSamplingStrategy.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000013 /* WhisperTimings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperTimings.swift"; path = "OpenSuperWhisper/Whis/WhisperTimings.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000014 /* WhisperTokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WhisperTokenData.swift"; path = "OpenSuperWhisper/Whis/WhisperTokenData.swift"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000015 /* ggml-tiny.en.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = "ggml-tiny.en.bin"; path = "ggml-tiny.en.bin"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000016 /* ggml-silero-v5.1.2.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = "ggml-silero-v5.1.2.bin"; path = "OpenSuperWhisper/ggml-silero-v5.1.2.bin"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000017 /* jfk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "jfk.wav"; path = "jfk.wav"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000018 /* whisper.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = whisper.xcframework; path = "libwhisper/whisper.cpp/build-apple/whisper.xcframework"; sourceTree = SOURCE_ROOT; };
+		0E5101000000000000000019 /* OpenSuperWhisperiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenSuperWhisperiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E510100000000000000001A /* OpenSuperWhisperiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenSuperWhisperiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -198,6 +267,16 @@
 		CE57B0462D52C7BC00929AF3 /* OpenSuperWhisperUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = OpenSuperWhisperUITests;
+			sourceTree = "<group>";
+		};
+		0E5101000000000000000034 /* OpenSuperWhisperiOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OpenSuperWhisperiOS;
+			sourceTree = "<group>";
+		};
+		0E5101000000000000000035 /* OpenSuperWhisperiOSTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OpenSuperWhisperiOSTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -231,6 +310,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE57B0402D52C7BC00929AF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E5101000000000000000038 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5101000000000000000032 /* whisper.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E510100000000000000003C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,6 +373,9 @@
 		CE57B01F2D52C7BB00929AF3 = {
 			isa = PBXGroup;
 			children = (
+				0E5101000000000000000034 /* OpenSuperWhisperiOS */,
+				0E5101000000000000000035 /* OpenSuperWhisperiOSTests */,
+				0E5101000000000000000036 /* iOS Shared */,
 				840156592D79EA1A00FB5FFE /* Bridge.h */,
 				840156402D79E87600FB5FFE /* libwhisper.xcodeproj */,
 				CE57B02A2D52C7BB00929AF3 /* OpenSuperWhisper */,
@@ -295,6 +392,8 @@
 		CE57B0292D52C7BB00929AF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				0E5101000000000000000019 /* OpenSuperWhisperiOS.app */,
+				0E510100000000000000001A /* OpenSuperWhisperiOSTests.xctest */,
 				CE57B0282D52C7BB00929AF3 /* OpenSuperWhisper.app */,
 				CE57B0392D52C7BC00929AF3 /* OpenSuperWhisperTests.xctest */,
 				CE57B0432D52C7BC00929AF3 /* OpenSuperWhisperUITests.xctest */,
@@ -405,6 +504,37 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		0E5101000000000000000036 /* iOS Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0E5101000000000000000001 /* TranscriptionEngine.swift */,
+				0E5101000000000000000002 /* WhisperEngine.swift */,
+				0E5101000000000000000003 /* TranscriptionService.swift */,
+				0E5101000000000000000004 /* TranscriptionSettings.swift */,
+				0E5101000000000000000005 /* PCMRecording.swift */,
+				0E5101000000000000000006 /* WhisperModelManager.swift */,
+				0E5101000000000000000007 /* AppPreferences.swift */,
+				0E5101000000000000000008 /* LanguageUtil.swift */,
+				0E5101000000000000000009 /* Whis.swift */,
+				0E510100000000000000000A /* WhisperAhead.swift */,
+				0E510100000000000000000B /* WhisperAheads.swift */,
+				0E510100000000000000000C /* WhisperAlignmentHeadsPreset.swift */,
+				0E510100000000000000000D /* WhisperContextParams.swift */,
+				0E510100000000000000000E /* WhisperFullParams.swift */,
+				0E510100000000000000000F /* WhisperGrammarElement.swift */,
+				0E5101000000000000000010 /* WhisperGrammarElementType.swift */,
+				0E5101000000000000000011 /* WhisperModelLoader.swift */,
+				0E5101000000000000000012 /* WhisperSamplingStrategy.swift */,
+				0E5101000000000000000013 /* WhisperTimings.swift */,
+				0E5101000000000000000014 /* WhisperTokenData.swift */,
+				0E5101000000000000000015 /* ggml-tiny.en.bin */,
+				0E5101000000000000000016 /* ggml-silero-v5.1.2.bin */,
+				0E5101000000000000000017 /* jfk.wav */,
+				0E5101000000000000000018 /* whisper.xcframework */,
+			);
+			name = "iOS Shared";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -480,6 +610,52 @@
 			productReference = CE57B0432D52C7BC00929AF3 /* OpenSuperWhisperUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0E510100000000000000003E /* OpenSuperWhisperiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E5101000000000000000042 /* Build configuration list for PBXNativeTarget "OpenSuperWhisperiOS" */;
+			buildPhases = (
+				0E5101000000000000000037 /* Sources */,
+				0E5101000000000000000038 /* Frameworks */,
+				0E5101000000000000000039 /* Resources */,
+				0E510100000000000000003A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0E5101000000000000000034 /* OpenSuperWhisperiOS */,
+			);
+			name = OpenSuperWhisperiOS;
+			packageProductDependencies = (
+			);
+			productName = OpenSuperWhisperiOS;
+			productReference = 0E5101000000000000000019 /* OpenSuperWhisperiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0E510100000000000000003F /* OpenSuperWhisperiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E5101000000000000000043 /* Build configuration list for PBXNativeTarget "OpenSuperWhisperiOSTests" */;
+			buildPhases = (
+				0E510100000000000000003B /* Sources */,
+				0E510100000000000000003C /* Frameworks */,
+				0E510100000000000000003D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E5101000000000000000041 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0E5101000000000000000035 /* OpenSuperWhisperiOSTests */,
+			);
+			name = OpenSuperWhisperiOSTests;
+			packageProductDependencies = (
+			);
+			productName = OpenSuperWhisperiOSTests;
+			productReference = 0E510100000000000000001A /* OpenSuperWhisperiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -490,6 +666,13 @@
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					0E510100000000000000003E = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					0E510100000000000000003F = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 0E510100000000000000003E;
+					};
 					CE57B0272D52C7BB00929AF3 = {
 						CreatedOnToolsVersion = 16.1;
 					};
@@ -531,6 +714,8 @@
 				CE57B0272D52C7BB00929AF3 /* OpenSuperWhisper */,
 				CE57B0382D52C7BC00929AF3 /* OpenSuperWhisperTests */,
 				CE57B0422D52C7BC00929AF3 /* OpenSuperWhisperUITests */,
+				0E510100000000000000003E /* OpenSuperWhisperiOS */,
+				0E510100000000000000003F /* OpenSuperWhisperiOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -602,6 +787,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0E5101000000000000000039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E510100000000000000002F /* ggml-tiny.en.bin in Resources */,
+				0E5101000000000000000030 /* ggml-silero-v5.1.2.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E510100000000000000003D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5101000000000000000031 /* jfk.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -638,6 +840,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0E5101000000000000000037 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E510100000000000000001B /* TranscriptionEngine.swift in Sources */,
+				0E510100000000000000001C /* WhisperEngine.swift in Sources */,
+				0E510100000000000000001D /* TranscriptionService.swift in Sources */,
+				0E510100000000000000001E /* TranscriptionSettings.swift in Sources */,
+				0E510100000000000000001F /* PCMRecording.swift in Sources */,
+				0E5101000000000000000020 /* WhisperModelManager.swift in Sources */,
+				0E5101000000000000000021 /* AppPreferences.swift in Sources */,
+				0E5101000000000000000022 /* LanguageUtil.swift in Sources */,
+				0E5101000000000000000023 /* Whis.swift in Sources */,
+				0E5101000000000000000024 /* WhisperAhead.swift in Sources */,
+				0E5101000000000000000025 /* WhisperAheads.swift in Sources */,
+				0E5101000000000000000026 /* WhisperAlignmentHeadsPreset.swift in Sources */,
+				0E5101000000000000000027 /* WhisperContextParams.swift in Sources */,
+				0E5101000000000000000028 /* WhisperFullParams.swift in Sources */,
+				0E5101000000000000000029 /* WhisperGrammarElement.swift in Sources */,
+				0E510100000000000000002A /* WhisperGrammarElementType.swift in Sources */,
+				0E510100000000000000002B /* WhisperModelLoader.swift in Sources */,
+				0E510100000000000000002C /* WhisperSamplingStrategy.swift in Sources */,
+				0E510100000000000000002D /* WhisperTimings.swift in Sources */,
+				0E510100000000000000002E /* WhisperTokenData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E510100000000000000003B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -650,6 +886,11 @@
 			isa = PBXTargetDependency;
 			target = CE57B0272D52C7BB00929AF3 /* OpenSuperWhisper */;
 			targetProxy = CE57B0442D52C7BC00929AF3 /* PBXContainerItemProxy */;
+		};
+		0E5101000000000000000041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E510100000000000000003E /* OpenSuperWhisperiOS */;
+			targetProxy = 0E5101000000000000000040 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -987,6 +1228,120 @@
 			};
 			name = Release;
 		};
+		0E5101000000000000000044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2LFY8272H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = OpenSuperWhisper;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone is used to record dictation for on-device transcription.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirankumarmanku.OpenSuperWhisperiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG OSW_NO_AUTOCORRECT $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/OpenSuperWhisperiOS/BridgeiOS.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0E5101000000000000000045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2LFY8272H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = OpenSuperWhisper;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone is used to record dictation for on-device transcription.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirankumarmanku.OpenSuperWhisperiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "OSW_NO_AUTOCORRECT $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/OpenSuperWhisperiOS/BridgeiOS.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0E5101000000000000000046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2LFY8272H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirankumarmanku.OpenSuperWhisperiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG OSW_NO_AUTOCORRECT $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenSuperWhisperiOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OpenSuperWhisperiOS";
+			};
+			name = Debug;
+		};
+		0E5101000000000000000047 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2LFY8272H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirankumarmanku.OpenSuperWhisperiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "OSW_NO_AUTOCORRECT $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenSuperWhisperiOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OpenSuperWhisperiOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1022,6 +1377,24 @@
 			buildConfigurations = (
 				CE57B0542D52C7BC00929AF3 /* Debug */,
 				CE57B0552D52C7BC00929AF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E5101000000000000000042 /* Build configuration list for PBXNativeTarget "OpenSuperWhisperiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5101000000000000000044 /* Debug */,
+				0E5101000000000000000045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E5101000000000000000043 /* Build configuration list for PBXNativeTarget "OpenSuperWhisperiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5101000000000000000046 /* Debug */,
+				0E5101000000000000000047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
