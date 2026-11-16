@@ -5,7 +5,13 @@
 import Foundation
 
 public struct WhisperContextParams {
+    /// Off on the iOS Simulator: its Metal driver traps creating ggml's model buffers (whisper.cpp's
+    /// own iOS example does the same). Devices and macOS keep the GPU.
+    #if targetEnvironment(simulator)
+    public var useGPU: Bool = false
+    #else
     public var useGPU: Bool = true
+    #endif
     public var flashAttention: Bool = true
     public var gpuDevice: Int32 = 0
     public var dtwTokenTimestamps: Bool = false
