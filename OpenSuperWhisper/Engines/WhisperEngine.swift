@@ -307,9 +307,13 @@ class WhisperEngine: TranscriptionEngine {
             .trimmingCharacters(in: .whitespacesAndNewlines)
         
         var processedText = cleanedText
+        // The Rust autocorrect library is built for macOS only; targets that don't link it
+        // (the iOS app) define OSW_NO_AUTOCORRECT.
+        #if !OSW_NO_AUTOCORRECT
         if settings.shouldApplyAsianAutocorrect && !cleanedText.isEmpty {
             processedText = AutocorrectWrapper.format(cleanedText)
         }
+        #endif
         
         return DetailedTranscription(
             text: processedText,

@@ -122,12 +122,18 @@ class TranscriptionService: ObservableObject {
 
     private static func makeEngine(_ selection: EngineSelection) async throws -> TranscriptionEngine {
         let engine: TranscriptionEngine
+        #if canImport(FluidAudio)
         if selection.engine == "fluidaudio" {
             engine = FluidAudioEngine(modelVersion: selection.modelVersion)
         } else {
             guard let path = selection.modelPath else { throw TranscriptionError.contextInitializationFailed }
             engine = WhisperEngine(modelPath: path)
         }
+        #else
+        // Targets without FluidAudio (the iOS app, for now) only have the Whisper engine.
+        guard let path = selection.modelPath else { throw TranscriptionError.contextInitializationFailed }
+        engine = WhisperEngine(modelPath: path)
+        #endif
         try await engine.initialize()
         return engine
     }
@@ -285,7 +291,9 @@ class TranscriptionService: ObservableObject {
                     self.progress = newProgress
                 }
             }
-        } else if let fluidEngine = engine as? FluidAudioEngine {
+        }
+        #if canImport(FluidAudio)
+        if let fluidEngine = engine as? FluidAudioEngine {
             fluidEngine.onProgressUpdate = { [weak self] newProgress in
                 Task { @MainActor in
                     guard let self,
@@ -295,6 +303,7 @@ class TranscriptionService: ObservableObject {
                 }
             }
         }
+        #endif
         
         let task = Task.detached(priority: .userInitiated) { [weak self] in
             if let preparation, preparation.engine === engine {

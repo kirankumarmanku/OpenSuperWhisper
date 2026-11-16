@@ -92,9 +92,11 @@ class FluidAudioEngine: TranscriptionEngine {
         
         var processedText = result.text.trimmingCharacters(in: .whitespacesAndNewlines)
         
+        #if !OSW_NO_AUTOCORRECT
         if settings.shouldApplyAsianAutocorrect && !processedText.isEmpty {
             processedText = AutocorrectWrapper.format(processedText)
         }
+        #endif
         
         onProgressUpdate?(1.0)
         
